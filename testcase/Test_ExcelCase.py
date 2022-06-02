@@ -31,14 +31,13 @@ class TestExcel:
         cookies = case[data_key.cookies]
         status_code = case[data_key.status_code]
         db_assert = case[data_key.db_assert]
-        request = Requests()
         if len(str(params).strip()) == 0 :
             headers = eval(headers)
         if len(str(headers).strip()) == 0 :
             params = eval(params)
-
+        request = Requests()
         if str(method).lower() == "get" :
-            res =request.get(url,json=params)
+            res =request.get(url,headers=headers)
         elif str(method).lower() == "post":
             res = request.post(url,json=params)
         else:
