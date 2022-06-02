@@ -1,0 +1,10 @@
+
+
+db_1:
+  db_host: "192.168.185.72"
+  db_user: "root"
+  db_password: "P@ssYSKLw0rd@298"
+  db_name: "sdn"
+  db_charset: "utf8"
+  db_port: "33060"
+

@@ -1,0 +1,8 @@
+
+BASE:
+  log_level: "debug"
+  log_extension: ".log"
+  test:
+    url: "192.168.185.72:8080"
+    case_file: "testdata.xlsx"
+    case_sheet: "Sheet1"

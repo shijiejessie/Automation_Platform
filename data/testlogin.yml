@@ -1,0 +1,19 @@
+---
+"case_name": "登陆成功用例"
+"url": "/api/login"
+"data":
+  username: "longjq1"
+  password: "SDNljq@1"
+  verifyCode: "11111"
+#期望结果
+"expect": '"userName": "longjq1", "userId": 66'
+
+---
+"case_name": "登陆失败用例"
+"url": "/api/login"
+"data":
+  username: "longjq2"
+  password: "SDNljq@1"
+  verifyCode: "11111"
+#期望结果
+"expect": '"userName": "longjq1", "userId": 66'
