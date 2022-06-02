@@ -38,6 +38,13 @@ def params_find(headers,cookies):
         cookies = res_find(cookies)
     return headers,cookies
 
+# def json_parse():
+#     if len(str(params).strip()) == 0:
+#         headers = eval(headers)
+#     if len(str(headers).strip()) == 0:
+#         params = eval(params)
+
+
 if __name__ == "__main__":
     #init_db("db_1")
     print(res_find('{"authToke":"${token}$"}'))
