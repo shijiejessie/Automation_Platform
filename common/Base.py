@@ -12,8 +12,6 @@ def init_db(db_alias):
     db_name = db_info["db_name"]
     charset = db_info["db_charset"]
     port = int(db_info["db_port"])
-
-
 #初始化数据信息，通过配置
     conn = Mysql( host ,  user , password, db_name, charset, port )
     print(conn)
@@ -27,16 +25,15 @@ def res_find(data,pattern_data=p_data):
 def res_sub(data,replace,pattern_data=p_data):
     pattern = re.compile(pattern_data)
     re_res = pattern.findall(data)
+    #拿repalce替换data,pattern_data为正则表达，可不传
     if re_res:
         return re.sub(pattern_data,replace,data)
     return re_res
-#验证请求中是否${}$需要结果关联
-def params_find(headers,cookies):
+
+def params_find(headers):
     if "${" in headers:
         headers = res_find(headers)
-    if "${" in cookies:
-        cookies = res_find(cookies)
-    return headers,cookies
+    return headers
 
 # def json_parse():
 #     if len(str(params).strip()) == 0:
@@ -44,8 +41,7 @@ def params_find(headers,cookies):
 #     if len(str(headers).strip()) == 0:
 #         params = eval(params)
 
-
 if __name__ == "__main__":
-    #init_db("db_1")
-    print(res_find('{"authToke":"${token}$"}'))
-    print(res_sub('{"authToke":"${token}$"}',"123"))
+    init_db("db_1")
+    #print(res_find('{"authToke":"${token}$"}'))
+    #print("lalala"+res_sub('{"authToke":"${token}$"}',"123"))

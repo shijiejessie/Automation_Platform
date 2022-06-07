@@ -84,7 +84,7 @@ class TestExcel:
         if len(str(headers)) == 0:
             params = eval(params)
         if len(str(params)) == 0:
-            headers =eval(headers)
+            headers = eval(headers)
 
         request = Requests()
         if str(method).lower() == "post":

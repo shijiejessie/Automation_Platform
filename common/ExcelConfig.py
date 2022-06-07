@@ -1,4 +1,3 @@
-
 #列的映射
 class DataConfig:
     case_id ="用例ID"

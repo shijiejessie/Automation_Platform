@@ -1,5 +1,3 @@
-
-
 db_1:
   db_host: "192.168.185.72"
   db_user: "root"

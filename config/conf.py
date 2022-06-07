@@ -1,17 +1,13 @@
 import os
 from utils.YamlUtil import YamlReader
 current = os.path.abspath(__file__)
-
-#print(current)
 BASE_DIR = os.path.dirname(os.path.dirname(current))
-#print(BASE_DIR)
+
 _config_path = BASE_DIR + os.sep + "config"
 _data_path = BASE_DIR + os.sep + "data"
-
 _config_file = _config_path + os.sep + "conf.yml"
 _log_path = BASE_DIR + os.sep + "logs"
 _db_config_file = _config_path + os.sep + "db_conf.yml"
-
 
 def get_config_path():
     return  _config_path
@@ -24,13 +20,10 @@ def get_db_config_file():
 def get_data_path():
     return _data_path
 
-
-
 class ConfigYaml:
     def __init__(self):
         self.config = YamlReader(get_config_file()).data()
         self.db_config = YamlReader(get_db_config_file()).data()
-
     def get_conf_url(self):
         return self.config["BASE"]["test"]["url"]
     def get_conf_log(self):
