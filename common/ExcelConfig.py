@@ -16,3 +16,4 @@ class DataConfig:
     cookies = "cookies"
     status_code = "status_code"
     db_assert = "数据库验证"
+    response_assert = "返回字段验证"
